@@ -8,6 +8,11 @@ namespace XGame_Domain.ValueObjects
 {
     public class Email
     {
-        public string EnderecoEmail { get; set; }
+        public Email(string enderecoEmail)
+        {
+            EnderecoEmail = enderecoEmail;
+        }
+
+        public string EnderecoEmail { get; private set; }
     }
 }
