@@ -4,6 +4,7 @@ using System.Net.Mail;
 using XGame_Domain.Arguments.Jogador;
 using XGame_Domain.Interface.Repositories;
 using XGame_Domain.Interface.Services;
+using XGame_Domain.ValueObjects;
 
 namespace XGame_Domain.Services
 {
@@ -18,6 +19,15 @@ namespace XGame_Domain.Services
 
         public AdicionarJogadorResponse AdicionarJogador(AdicionarJogadorRequest request)
         {
+            var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
+
+            var email = new Email(request.Email);
+
+            Jogador jogador = new Jogador(nome, email, request.Senha);
+
+            if (this.IsInvalid())
+                return null;
+            
             Guid Id = _repositoryJogador.AdicionarJogador(request);
 
             return new AdicionarJogadorResponse() { Message = string.Format("Jogador Adicionado com Sucesso {0}", Id) }; 
