@@ -61,6 +61,15 @@ namespace XGame_Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dados não encontrados..
+        /// </summary>
+        internal static string DADOS_NAO_ENCONTRADO {
+            get {
+                return ResourceManager.GetString("DADOS_NAO_ENCONTRADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} é Inválida..
         /// </summary>
         internal static string X0_Invalida {
@@ -75,6 +84,15 @@ namespace XGame_Domain.Resources {
         internal static string X0_Invalido {
             get {
                 return ResourceManager.GetString("X0_Invalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jogador {0} Logado. Bem Vindo {1} .
+        /// </summary>
+        internal static string X0_Logado_Bem_Vindo_X1 {
+            get {
+                return ResourceManager.GetString("X0_Logado_Bem_Vindo_X1", resourceCulture);
             }
         }
     }

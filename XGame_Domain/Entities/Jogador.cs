@@ -4,7 +4,7 @@ using XGame_Domain.Enum;
 using XGame_Domain.Extensions;
 using XGame_Domain.ValueObjects;
 
-namespace XGame_Domain
+namespace XGame_Domain.Entities
 {
     public class Jogador : Notifiable
     {
@@ -20,6 +20,15 @@ namespace XGame_Domain
             
             if (IsValid())
                 Senha = Senha.ConvertToMD5();
+
+            AddNotifications(Nome, Email);
+        }
+
+        public void AlterarJogador(Nome nome, Email email)
+        {
+            Nome = nome;
+            Email = email;
+
 
             AddNotifications(Nome, Email);
         }

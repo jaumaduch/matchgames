@@ -1,9 +1,15 @@
 ﻿using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Mail;
 using XGame_Domain.Arguments.Jogador;
+using XGame_Domain.Entities;
+using XGame_Domain.Extensions;
 using XGame_Domain.Interface.Repositories;
 using XGame_Domain.Interface.Services;
+using XGame_Domain.Resources;
 using XGame_Domain.ValueObjects;
 
 namespace XGame_Domain.Services
@@ -28,37 +34,52 @@ namespace XGame_Domain.Services
             if (this.IsInvalid())
                 return null;
             
-            Guid Id = _repositoryJogador.AdicionarJogador(request);
+            Guid Id = _repositoryJogador.AdicionarJogador(jogador);
 
             return new AdicionarJogadorResponse() { Message = string.Format("Jogador Adicionado com Sucesso {0}", Id) }; 
         }
 
+        public AlterarJogadorResponse AlterarJogador(AlterarJogadorResquest request)
+        {
+
+            Jogador jogador = _repositoryJogador.ObterPorId(request.Id);
+
+            if (jogador == null)
+            {
+                AddNotification("Id", Message.DADOS_NAO_ENCONTRADO);
+                return null;
+            }
+
+            var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
+
+            var email = new Email(request.Email);
+
+            jogador.AlterarJogador(nome, email);
+
+            if (IsInvalid())
+                return null;
+
+            _repositoryJogador.AlterarJogador(jogador);
+
+            return new AlterarJogadorResponse() { Message = "Jogador Alterado com Sucesso." };
+        }
+
         public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request)
         {
+            var email = new Email(request.Email);
 
-            var response = _repositoryJogador.AutenticarJogador(request);
+            var senha = request.Senha.ConvertToMD5();
 
-            return response;
+            Jogador jogador = _repositoryJogador.AutenticarJogador(email, senha);
+
+            return (AutenticarJogadorResponse)jogador;
 
         }
 
-        /// <summary>
-        /// Método de validação de E-mail.
-        /// </summary>
-        /// <param name="enderecoEmail"></param>
-        /// <returns></returns>
-        private bool IsEmail(string enderecoEmail)
+        public List<JogadorResponse> ListarJogador()
         {
-            try
-            {
-                MailAddress m = new MailAddress(enderecoEmail);
-
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
+            return _repositoryJogador.Listar().Select(jogador => (JogadorResponse)jogador).ToList();
         }
+
     }
 }

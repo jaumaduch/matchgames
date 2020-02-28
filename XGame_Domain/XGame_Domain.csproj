@@ -176,6 +176,7 @@
   <ItemGroup>
     <Compile Include="Arguments\Jogador\AdicionarJogadorResponse.cs" />
     <Compile Include="Arguments\Jogador\AdicionarJogadorRequest.cs" />
+    <Compile Include="Arguments\Jogador\AlterarJogadorResponse.cs" />
     <Compile Include="Arguments\Jogador\AutenticarJogadorRequest.cs" />
     <Compile Include="Arguments\Jogador\AutenticarJogadorResponse.cs" />
     <Compile Include="Arguments\Plataforma\AdicionarPlataformaResponse.cs" />
@@ -190,8 +191,10 @@
     <Compile Include="Interface\Arguments\IResponse.cs" />
     <Compile Include="Interface\Arguments\IRequest.cs" />
     <Compile Include="Interface\Repositories\IRepositoryJogador.cs" />
+    <Compile Include="Arguments\Jogador\AlterarJogadorResquest.cs" />
     <Compile Include="Interface\Services\IServicePlataforma.cs" />
     <Compile Include="Interface\Services\IServiceJogador.cs" />
+    <Compile Include="Arguments\Jogador\JogadorResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Message.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DADOS_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Dados não encontrados.</value>
+  </data>
   <data name="X0_Invalida" xml:space="preserve">
     <value>{0} é Inválida.</value>
   </data>
   <data name="X0_Invalido" xml:space="preserve">
     <value>{0} é Inválido.</value>
+  </data>
+  <data name="X0_Logado_Bem_Vindo_X1" xml:space="preserve">
+    <value>Jogador {0} Logado. Bem Vindo {1} </value>
   </data>
 </root>
