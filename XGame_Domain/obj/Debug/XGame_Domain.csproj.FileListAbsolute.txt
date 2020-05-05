@@ -1,3 +1,17 @@
 E:\Documentos\GitHub\matchgames\XGame_Domain\obj\Debug\XGame_Domain.csprojAssemblyReference.cache
 E:\Documentos\GitHub\matchgames\XGame_Domain\obj\Debug\XGame_Domain.Resources.Message.resources
 E:\Documentos\GitHub\matchgames\XGame_Domain\obj\Debug\XGame_Domain.csproj.GenerateResource.cache
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\XGame_Domain.dll.config
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\XGame_Domain.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\XGame_Domain.pdb
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\EntityFramework.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\prmToolkit.NotificationPattern.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\EntityFramework.xml
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\Documentos\GitHub\matchgames\XGame_Domain\bin\Debug\en-US\prmToolkit.NotificationPattern.resources.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\obj\Debug\XGame_Domain.csproj.CopyComplete
+E:\Documentos\GitHub\matchgames\XGame_Domain\obj\Debug\XGame_Domain.dll
+E:\Documentos\GitHub\matchgames\XGame_Domain\obj\Debug\XGame_Domain.pdb
